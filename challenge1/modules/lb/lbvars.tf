@@ -3,7 +3,6 @@ variable "resource_group_name" {
   type = string
 }
 
-# Azure Resources Location
 variable "location" {
   description = "Region in which Azure Resources to be created"
   type = string
