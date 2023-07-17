@@ -13,7 +13,6 @@ resource "azurerm_network_interface" "linuxvm_nic" {
     name                          = var.vm_ipconfig_name
     subnet_id                     = data.azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
-    #public_ip_address_id = azurerm_public_ip.web_linuxvm_publicip.id 
   }
 }
 

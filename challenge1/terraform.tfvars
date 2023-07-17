@@ -38,7 +38,4 @@ admin_username = ["webvmadmin", "appvmadmin", "dbvmadmin"]
 
 lbpublicip_name = "lb-public-ip"
 lb_name = "myapp-lb"
-
-
 backend_pool_name = "myapp-backend-pool"
-

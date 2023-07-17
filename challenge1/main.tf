@@ -54,8 +54,6 @@ module "subnet_and_nsg" {
 
 }
 
-
-
 module "linuxvm" {
   depends_on = [ module.subnet_and_nsg ]
   source = "./modules/vm"
@@ -73,7 +71,6 @@ module "linuxvm" {
 module "lb" {
   depends_on = [ module.linuxvm ]
   source = "./modules/lb"
-
   resource_group_name = var.resource_group_name
   location = var.location
   lbpublicip_name =  var.lbpublicip_name
@@ -81,4 +78,3 @@ module "lb" {
   backend_pool_name = var.backend_pool_name
   vm_nic = var.nic_name[0]
 }
-
