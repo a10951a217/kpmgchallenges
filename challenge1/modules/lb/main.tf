@@ -59,7 +59,6 @@ data "azurerm_network_interface" "webvm_nic" {
 
 resource "azurerm_network_interface_backend_address_pool_association" "web_nic_lb_associate" {
   network_interface_id    = data.azurerm_network_interface.webvm_nic.id
-  #ip_configuration_name   = azurerm_network_interface.linuxvm_nic.ip_configuration[0].name
   ip_configuration_name   = data.azurerm_network_interface.webvm_nic.ip_configuration[0].name
   backend_address_pool_id = azurerm_lb_backend_address_pool.web_lb_backend_address_pool.id
 }
